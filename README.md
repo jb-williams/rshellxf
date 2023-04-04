@@ -1,4 +1,4 @@
-# RSHELLXF
+# rshellxf
 ## Proof of Concept Go Reverse Shell
 **ONLY RUN ON SYSTEMS WHERE YOU HAVE EXPRESS PERMISSION TO DO SO** \
 **RUN AT OWN RIST** \
