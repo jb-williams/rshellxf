@@ -8,7 +8,7 @@
 * *In `main.go` you can change windows interaction from `cmd` to `powershell` by switching the commented code at lines `33-34`*
 
 * **REQUIREMENTS**:
-    * `golang` >= 1.20
+    * `golang` >= 1.20 , >= 1.19 may work but not tested
     * `x86_64-w64-mingw32-gcc` (To compile to Windows from Linux)
 
 *note* \
