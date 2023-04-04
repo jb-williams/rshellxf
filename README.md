@@ -1,9 +1,9 @@
 # rshellxf
 ## Proof of Concept Go Reverse Shell
 **ONLY RUN ON SYSTEMS WHERE YOU HAVE EXPRESS PERMISSION TO DO SO** \
-**RUN AT OWN RIST** \
+**RUN AT OWN RIST**
 
-*UN-TESTED AT THE MOMENT* \
+*UN-TESTED AT THE MOMENT*
 * *Makefile only tested on Debian Linux*
 * *In `main.go` you can change windows interaction from `cmd` to `powershell` by switching the commented code at lines `33-34`*
 
