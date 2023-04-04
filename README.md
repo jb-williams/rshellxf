@@ -7,12 +7,12 @@
 *Makefile only tested on Debian Linux* \
 *in `main.go` you can change windows interaction from `cmd` to `powershell` by switching the commented code at lines `33-34`*
 
-**REQUIREMENTS**:
+* **REQUIREMENTS**:
     * golang >= 1.20 \
     * x86_64-w64-mingw32-gcc(To compile to Windows from Linux) \
-I tried to make options for Linux, MAC, and Windows(.exe and .dll) and remove debugging tags, and hiding Windows' GUI window. \
+I tried to make options for Linux, MAC, and Windows(.exe and .dll) and remove debugging tags, and hiding Windows' GUI window.
 
-### Build
+## Build
 * linux - To build for Linux:
     * `cd` to the `rshellxf` directory
     * `make linux`
