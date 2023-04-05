@@ -1,20 +1,26 @@
 # rshellxf
 ## Proof of Concept Go Reverse Shell
-**!!! ONLY RUN ON SYSTEMS WHERE YOU HAVE EXPRESS PERMISSION TO DO SO !!!** \
+**!!! ONLY RUN ON SYSTEMS WHERE YOU HAVE EXPRESS PERMISSION TO DO SO !!!**
+
 **!!! RUN AT OWN RIST !!!**
 
-*UN-TESTED AT THE MOMENT*
 * *Makefile only tested on Debian Linux*
 * *In `main.go` you can change windows interaction from `cmd` to `powershell` by switching the commented code at lines `33-34`*
 
+* Linux     - Tested    - Interactive Shell Works
+* MAC       - Untested  - Untested
+* Windows   - Tested    - Can run Commands for cmd & powershell versions but not very interactive
+
 * **REQUIREMENTS**:
     * `golang` >= 1.20 , >= 1.19 may work but not tested
-    * `x86_64-w64-mingw32-gcc` (To compile to Windows from Linux)
+    * `x86_64-w64-mingw32-gcc` (To compile to Windows from Linux):
+        * Not on Debian, Only on Kali can you make the `.dll`(as far as I know atm) 
 
 *note* \
 *I tried to make options for Linux, MAC, and Windows(.exe and .dll) and remove debugging tags, and hiding Windows' GUI window.*
 
 ## Build
+**!!! Always run `make clean` before rebuilding any of the executables !!!**
 * `make linux` - To build for Linux:
     * `cd` to the `rshellxf` directory
     * `make linux`

