@@ -47,3 +47,5 @@ clean:
 	@echo $(CLEAN)
 	@for binary in $(BINARY); do if [ -f $$binary ];then rm $$binary;fi;done
 
+install-go:
+	./install-go.sh

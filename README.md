@@ -47,3 +47,8 @@
     * `cd` to the `rshellxf` directory
     * `make clean`
     * Removes **ALL** executables and resets `main.go` for new input
+        
+* `make install-go` - To Install Go:
+    * `cd` to the `rshellxf` directory
+    * `make install-go`
+    * Installs Golang to `/usr/local/go`
