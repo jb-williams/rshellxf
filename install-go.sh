@@ -14,11 +14,11 @@ install_golang() {
         wget https://go.dev/dl/"$VERSION"
         tar xvfz "$VERSION"
         if [[ -d /usr/local/go ]]; then
-            sudo rm -rfi /usr/local/go
-            sudo mv -i go /usr/local/
+            sudo rm -rf /usr/local/go
+            sudo mv go /usr/local/
             rm "$VERSION"
         else 
-            sudo mv -i go /usr/local/
+            sudo mv go /usr/local/
             rm "$VERSION"
         fi
 
