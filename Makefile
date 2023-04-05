@@ -1,11 +1,4 @@
-BUILDPATH=$(CURDIR)
-GO=$(shell which go)
-GOBUILD=$(GO) build
-GOINSTALL=$(GO) install
-GOCLEAN=$(GO) clean
-
 EXEBUILD=main.go
-EXEFILE=main
 EXENAME=$(notdir $(CURDIR))
 CLEAN ?= $(shell bash -c 'sed -i -E "s/([0-9]{1,3}[\.]){3}[0-9]{1,3}:[0-9]{1,5}/LHOST:LPORT/g" main.go')
 LHOST ?= $(shell bash -c 'read -p "LHOST: " LHOST; sed -i "s/LHOST/$$LHOST/g" main.go')
