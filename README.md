@@ -15,7 +15,7 @@
 * **REQUIREMENTS**:
     * `golang` >= 1.20 , >= 1.19 may work but not tested
     * `x86_64-w64-mingw32-gcc` (To compile to Windows from Linux):
-        * Not on Debian, Only on Kali can you make the `.dll`(as far as I know atm) 
+        * Not on Debian, packagename `gcc-mingw-w64-x86-64-win32`, Only on Kali can you make the `.dll`(as far as I know atm) 
 
 *note* \
 *I tried to make options for Linux, MAC, and Windows(.exe and .dll) and remove debugging tags, and hiding Windows' GUI window.*
