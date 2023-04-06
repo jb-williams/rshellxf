@@ -9,7 +9,8 @@
 
 * Linux     - Tested    - Interactive Shell Works
 * MAC       - Untested  - Untested
-* Windows   - Tested    - Can run Commands for cmd & powershell versions but not very interactive
+* Windows   - Tested    - Can run Commands for cmd & powershell versions but not very interactive:
+    * `.dll` is un-tested
 
 * **REQUIREMENTS**:
     * `golang` >= 1.20 , >= 1.19 may work but not tested
